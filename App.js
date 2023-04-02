@@ -1,12 +1,21 @@
-const heading = React.createElement(
-  "div",
-  { id: "Parent" },
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", { id: "1" }, "Hello Ajit"),
-    React.createElement("h1", { id: "2" }, "Hello Prince"),
-  ])
-);
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const Title = () => {
+  return <h2>Akshay Saini Namaste Javascript</h2>;
+};
+
+//This is componenent composition
+const HeadingComponent = () => {
+  return (
+    <div className="container">
+        <Title/>
+      <h2>Namaste Javascript and react is a great course</h2>
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+
+root.render(<HeadingComponent/>);
